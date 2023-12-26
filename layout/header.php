@@ -26,6 +26,12 @@
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/ekart/template/register.php">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/ekart/template/login.php">Login</a>
+      </li>
     </ul>
     
   </div>
