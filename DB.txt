@@ -1,0 +1,47 @@
+user
+    id pk auto_increment
+    name (varchar 30)
+    email(varchar 50)
+    password (varchar 10)
+
+category
+    id pk auto_increment
+    category_name (varchar 20)
+    category_Description (varchar 20)
+
+product
+    id pk auto_increment
+    category_id fk (category id)
+    product_name (varchar 20)
+    product_price (int 20)
+    product_price (varchar 20)
+    
+TABLE QUERY
+
+-- Create the 'user' table
+CREATE TABLE user (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(30),
+    email VARCHAR(50),
+    password VARCHAR(10)
+);
+
+-- Create the 'category' table
+CREATE TABLE category (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    category_name VARCHAR(20),
+    category_description VARCHAR(20)
+);
+
+-- Create the 'product' table with a foreign key reference to 'category' table
+CREATE TABLE product (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    category_id INT,
+    product_name VARCHAR(20),
+    product_price INT,
+    product_description VARCHAR(20),
+    FOREIGN KEY (category_id) REFERENCES category(id)
+);
+
+
+--Alter Commands
