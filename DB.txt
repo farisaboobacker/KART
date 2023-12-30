@@ -1,8 +1,10 @@
 user
     id pk auto_increment
     name (varchar 30)
-    email(varchar 50)
-    password (varchar 10)
+    email(varchar 50) unique
+    password (text)
+    role (varchar 20)
+
 
 category
     id pk auto_increment

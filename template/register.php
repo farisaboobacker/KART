@@ -80,7 +80,8 @@ $title = "Register";
    if ($_SERVER['REQUEST_METHOD']=="POST") {
     // Add user model
         include('../model/user.php');
-        $user_model=new User();
+        include('../Database/Db_connect.php');
+        $user_model=new User(new DB_CON());
        $name=$_REQUEST['name'];
        $email=$_REQUEST['email'];
        $password=$_REQUEST['password'];

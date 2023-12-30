@@ -1,12 +1,7 @@
 <?php
-session_start();
+
 $title="Home";
-if (!isset($_SESSION['user_id'])) {
-    echo "<script>
-    alert('please login');
-    window.location.href='/ekart/template/login.php'
-</script>";
-}else{
+
 ?>
 <head>
     <?php include_once("./layout/head.php"); ?>
@@ -79,4 +74,3 @@ if (!isset($_SESSION['user_id'])) {
     <footer class="bg-body-tertiary text-center text-lg-start mt-4" >
         <?php include_once("./layout/footer.php"); ?>
     </footer>
-<?php } ?>
