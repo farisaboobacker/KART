@@ -46,12 +46,23 @@ if ($uri=="login.php"||$uri=="register.php"||$uri=="adminregister.php") {
             echo "<a class='nav-link' href='/ekart/template/login.php'>Login</a>";
           } else {
             echo "<a class='nav-link' href='/ekart/template/logout.php'>Logout</a>";
+           
           }
         ?>
       </li>
       <li class="nav-item">
-        <?= (isset($_SESSION['logined']))?$_SESSION['user_name']:"" ?>
+        <?= (isset($_SESSION['logined']))?"<a class='nav-link' href=''>".$_SESSION['user_name']."</a>":"" ?>
       </li>
+      <li class="nav-item">
+        <?php 
+        if (isset($_SESSION['logined'])) {
+            if ($_SESSION['role']=='admin') {
+              echo "<a class='nav-link' href='/ekart/template/admin/dashboard/admindashboard.php'>Dashborad</a>";
+            }
+          }
+        ?>
+      </li>
+     
     </ul>
     
   </div>

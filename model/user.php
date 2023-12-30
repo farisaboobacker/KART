@@ -38,5 +38,11 @@ class User{
         $sql->bind_param("ssss",$name, $email,$pass_hash,$role);
         return $sql->execute();
     }
+
+    public function fecthUsers()  {
+        $sql2="SELECT * FROM `users`";
+        return $this->_db->query($sql2);
+        
+    }
 }
 ?>
