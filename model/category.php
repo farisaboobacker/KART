@@ -5,9 +5,9 @@ class Category{
         $this->_db = $db->con;
     }
 
-    public function addCategory($category_name,$category_Description) {
-        $sql = $this->_db->prepare("INSERT INTO `category` (`category_name`,`category_Description`) VALUES (?, ?)");
-        $sql->bind_param("ss",$category_name, $category_Description);
+    public function addCategory($category_name,$category_Description,$category_image) {
+        $sql = $this->_db->prepare("INSERT INTO `category` (`category_name`,`category_Description`,`category_image`) VALUES (?, ?, ?)");
+        $sql->bind_param("sss",$category_name, $category_Description,$category_image);
         return $sql->execute();
     }
 
